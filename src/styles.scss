@@ -5,6 +5,9 @@
     --dark: #0F172B;
 }
 
+html{
+    scroll-behavior: smooth;
+}
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
     margin-top: 0;
     margin-bottom: 0.5rem;
@@ -13,7 +16,31 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
     line-height: 1.2;
     color: #0F172B;
 }
+.nav-item.dropdown{
+    position: relative;
+}
 
+.dropdown-item:hover{
+    color: #FEA116;
+}
+
+.dropdown-list{
+    position: absolute;
+    color: #000;
+    top: 80%;
+    z-index: 5;
+    background-color: #FFF;
+    padding: 10px 5px;
+    border-radius: 3px !important;
+    width: 120px;
+    height: 80px;
+    line-height: 2;
+    display: none;
+}
+
+.nav-item.dropdown:hover .dropdown-list{
+   display: block;
+}
 .bg-dark {
     background-color: #0F172B !important;
 }
@@ -53,20 +80,6 @@ a {
     z-index: 99;
 }
 
-
-/*** Spinner ***/
-#spinner {
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity .5s ease-out, visibility 0s linear .5s;
-    z-index: 99999;
-}
-
-#spinner.show {
-    transition: opacity .5s ease-out, visibility 0s linear 0s;
-    visibility: visible;
-    opacity: 1;
-}
 
 
 /*** Button ***/
